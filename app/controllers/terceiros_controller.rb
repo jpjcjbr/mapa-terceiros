@@ -38,6 +38,7 @@ class TerceirosController < ApplicationController
 
       @terceiro = Terceiro.new
       @terceiro.nome = terceiro_vpsa['nome']
+      @terceiro.email = terceiro_vpsa['email']
 
       if pesquisa[0]
         @latitude = pesquisa[0].geometry['location']['lat']
