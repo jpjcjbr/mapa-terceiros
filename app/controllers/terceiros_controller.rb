@@ -20,6 +20,7 @@ class TerceirosController < ApplicationController
         @terceiros << terceiro
       end
     else
+      session['url_before_auth'] = request.path
       redirect_to '/auth/oauth'
     end
   end

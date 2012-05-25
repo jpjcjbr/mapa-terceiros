@@ -15,6 +15,6 @@ class OauthAccessController < ApplicationController
 
     session['access_token'] = resposta.parsed_response['access_token']
         
-    redirect_to root_url
+    redirect_to session['url_before_auth']
   end  
 end
