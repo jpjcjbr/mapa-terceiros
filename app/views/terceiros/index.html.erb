@@ -1,6 +1,33 @@
-<h1>Terceiros</h1>
-<ul>
-	<% @terceiros.each do |terceiro| %>
-		<li><%= link_to terceiro.nome, terceiros_mapa_path(:id => terceiro.id) %> - <%= terceiro.endereco%></li>
+<div id="topBar">
+	<%= link_to image_tag("home.png"), "/" %>
+	<%= link_to image_tag("search_1.png"), "/terceiros/index" %>
+	<%= link_to image_tag("help.png"), "/" %>
+	<%= link_to image_tag("logo_pequeno.png", :class=>"logo"), "/" %>
+</div>
+
+<h1>Lista de Cadastros</h1>
+<table width="870" border="0" id="filtros">
+  <tr>
+	<td width="30"><input id="input_sharp" type="text" onKeyUp="filter(this, 'lista', '0')"></td>
+    <td width="300"><input id="input_nome" type="text" onKeyUp="filter(this, 'lista', '1')"></td>
+    <td width="240"><input id="input_email" type="text" onKeyUp="filter(this, 'lista', '2')"></td>
+    <td width="300"><input id="input_end" type="text" onKeyUp="filter(this, 'lista', '3')"></td>
+  </tr>
+</table>
+
+<table cellpadding="0" width="870" cellspacing="0" id="lista">
+  <tr>
+    <th width="30">#</th>
+    <th width="300" align="left">NOME</th>
+	<th width="240"align="left">E-MAIL</th>
+    <th width="300"align="left">ENDERECO</th>
+  </tr>
+	<% @terceiros.each_with_index do |terceiro, i| %>
+		<tr>
+		<td><%= i+1 %></td>
+		<td><%= link_to terceiro.nome, terceiros_mapa_path(:id => terceiro.id) %></td>
+		<td><%= terceiro.email %></td>
+		<td><%= terceiro.endereco%></td>
+		</tr>
 	<% end %>
-</ul>
+</table>

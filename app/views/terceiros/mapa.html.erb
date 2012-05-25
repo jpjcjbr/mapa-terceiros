@@ -1,6 +1,14 @@
-<h1>Mapa Terceiro</h1>
-<p><%=@terceiro.nome%></p>
-<p><%= @endereco_formatado %></p>
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@latitude}%2C#{@longitude}" %>
+<div id="topBar">
+	<%= link_to image_tag("home.png"), "/" %>
+	<%= link_to image_tag("search_1.png"), "/" %>
+	<%= link_to image_tag("help.png"), "/" %>
+	<%= link_to image_tag("logo_pequeno.png", :class=>"logo"), "/" %>
+</div>
 
-<%= link_to 'Voltar', terceiros_path%>
+<h1><%=@terceiro.nome%></h1>
+<p><%=image_tag("note2.png", :class=>"noteImg")%><%=@endereco_formatado%></p>
+<p><%=image_tag("mail.png", :class=>"mailImg")%><%=@terceiro.email%></p>
+<h1>Mapa</h1>
+<div id="ImgMapa">
+	<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@latitude}%2C#{@longitude}" %>
+</div>
