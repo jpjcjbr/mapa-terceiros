@@ -1,0 +1,20 @@
+development:
+  url_authorization: https://vpsa-oauth-server.herokuapp.com/oauth/authorization
+  url_token: https://vpsa-oauth-server.herokuapp.com/oauth/token
+  client_id: https://vpsa-oauth-server.herokuapp.com/clients/4fbeb4b51fd49d0001000008
+  redirect_uri: http://localhost:3000/oauth/vpsa/callback
+  client_secret: 7fb94459837f9726b7fc04774d96b1af934ac387a2d3f29cae5487863b4729a7
+
+test:
+  url_authorization: https://vpsa-oauth-server.herokuapp.com/oauth/authorization
+  url_token: https://vpsa-oauth-server.herokuapp.com/oauth/token
+  client_id: https://vpsa-oauth-server.herokuapp.com/clients/4fbeb4b51fd49d0001000008 
+  redirect_uri: http://terceiros.herokuapp.com/oauth/vpsa/callback
+  client_secret: 7fb94459837f9726b7fc04774d96b1af934ac387a2d3f29cae5487863b4729a7
+    
+production:
+  url_authorization: https://vpsa-oauth-server.herokuapp.com/oauth/authorization
+  url_token: https://vpsa-oauth-server.herokuapp.com/oauth/token
+  client_id: https://vpsa-oauth-server.herokuapp.com/clients/4fbeb4b51fd49d0001000008
+  redirect_uri: http://terceiros.herokuapp.com/oauth/vpsa/callback
+  client_secret: 7fb94459837f9726b7fc04774d96b1af934ac387a2d3f29cae5487863b4729a7

@@ -1,0 +1,6 @@
+<h1>Terceiros</h1>
+<ul>
+	<% @terceiros.each do |terceiro| %>
+		<li><%= link_to terceiro.nome, terceiros_mapa_path(:id => terceiro.id) %> - <%= terceiro.endereco%></li>
+	<% end %>
+</ul>
