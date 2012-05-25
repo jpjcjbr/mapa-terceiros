@@ -14,6 +14,7 @@ class TerceirosController < ApplicationController
       terceiros_vpsa.each do |terceiro_vpsa|
         terceiro = Terceiro.new
         terceiro.nome = terceiro_vpsa['nome']
+        terceiro.email = terceiro_vpsa['email']
         terceiro.id = terceiro_vpsa['id']
         terceiro.endereco = self.endereco(terceiro_vpsa)
         @terceiros << terceiro
