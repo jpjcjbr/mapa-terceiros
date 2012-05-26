@@ -50,6 +50,7 @@ class TerceirosController < ApplicationController
         @longitude = 0
       end
     else
+      session['url_before_auth'] = request.path
       redirect_to '/auth/oauth'
     end
   end
