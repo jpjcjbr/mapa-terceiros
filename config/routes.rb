@@ -1,10 +1,8 @@
 ListagemTerceiros::Application.routes.draw do
-  match 'auth/oauth', :to => 'auth#oauth'
-  match 'oauth/vpsa/callback', :to => 'oauth_access#create'
+  match '/auth/:provider/callback', to: 'sessions#create'
+  
   match 'terceiros', :to => 'terceiros#index'
   match 'terceiros/mapa', :to => 'terceiros#mapa'
-    
-  get "oauth_access/create"
   
   root :to => 'welcome#index'
 
